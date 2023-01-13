@@ -1,36 +1,16 @@
 <?php
 
 /*
-    Não é obrigatório, mas pode ser feito a especificação (garantia) do tipo recebido
-e retornado de uma função.
+    Para importar/incluir um arquivo de código externo. Utilizamos: include "/nomearquivo.php"
 
-*/
+    Se a importação for obrigatóri, usa-se: require "/nomearquivo.php
 
-//Função(Há um retorno)
-function sacar(array $conta, float $valor): array{
-    if($valor <= $conta['saldo']){
-        $conta['saldo'] -= $valor;
-        exibirMensagem('Valor Sacado!');
-    }else{
-        exibirMensagem('Valor inválido!');
-    }
-    return $conta;
-}
+    E se for obrigatória garantido somente uma importação no arquivo,
+    usamos: require_once "/nomearquivo.php
 
-function depositar(array $conta, float $valor): array{
-    if($valor > 0){
-        $conta['saldo'] += $valor;
-        exibirMensagem('Valor Depositado!');
-    }else{
-        exibirMensagem('Valor inválido!');
-    }
-    return $conta;
-}
+ * */
 
-//Subrotina(Não há retorno)
-function exibirMensagem($mensagem){
-    echo "$mensagem" . PHP_EOL;
-}
+require_once "funcos.php";
 
 $contasCorrente = [
     '190.478.987-65' => [
