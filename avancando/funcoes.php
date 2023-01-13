@@ -33,3 +33,14 @@ function depositar(array $conta, float $valor): array{
 function exibirMensagem($mensagem){
     echo "$mensagem" . PHP_EOL;
 }
+
+function toUpperName(array &$conta) // passagem de parâmetro por referência
+{
+    $conta['titular'] = strtoupper($conta['titular']);
+}
+
+
+
+
+
+
