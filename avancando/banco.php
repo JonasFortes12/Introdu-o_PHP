@@ -32,14 +32,31 @@ $contasCorrente['190.472.987-72'] = depositar($contasCorrente['190.472.987-72'],
 
 toUpperName($contasCorrente['190.478.984-81']);
 
-unset($contasCorrente['190.478.984-81']); // Removendo um item da lista.
 
-echo "<ul>";
-foreach ($contasCorrente as $cpf => $conta){
-    ['titular' => $titular, 'saldo' => $saldo] = $conta;
-    exibirMensagem(
-        "<li> CPF: $cpf | Nome:$titular | Saldo: $saldo </li>
-    ");
-}
-echo "</ul>";
+?> //fechamento da área de código PHP
+
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Contas Correntes:</h1><br>
+
+    <dl>
+        <?php foreach ($contasCorrente as $cpf => $conta){?>
+        <dt>
+            <h3> <?php echo "Titular: {$conta['titular']} CPF: $cpf"; ?>  </h3>
+        </dt>
+        <dd>
+           <h4><?php echo "Saldo: {$conta['saldo']}"; ?></h4>
+        </dd>
+        <?php } ?>
+    </dl>
+</body>
+</html>
 
