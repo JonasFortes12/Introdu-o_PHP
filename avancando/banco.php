@@ -33,7 +33,8 @@ $contasCorrente['190.472.987-72'] = depositar($contasCorrente['190.472.987-72'],
 toUpperName($contasCorrente['190.478.984-81']);
 
 foreach ($contasCorrente as $cpf => $conta){
+    ['titular' => $titular, 'saldo' => $saldo] = $conta;
     exibirMensagem(
-        "CPF: $cpf | Nome:{$conta['titular']} | Saldo: {$conta['saldo']}
+        "CPF: $cpf | Nome:$titular | Saldo: $saldo}
     ");
 }
