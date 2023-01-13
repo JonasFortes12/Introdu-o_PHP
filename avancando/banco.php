@@ -34,10 +34,12 @@ toUpperName($contasCorrente['190.478.984-81']);
 
 unset($contasCorrente['190.478.984-81']); // Removendo um item da lista.
 
-
+echo "<ul>";
 foreach ($contasCorrente as $cpf => $conta){
     ['titular' => $titular, 'saldo' => $saldo] = $conta;
     exibirMensagem(
-        "CPF: $cpf | Nome:$titular | Saldo: $saldo}
+        "<li> CPF: $cpf | Nome:$titular | Saldo: $saldo </li>
     ");
 }
+echo "</ul>";
+
