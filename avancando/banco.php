@@ -51,5 +51,8 @@ $contasCorrente['190.478.987-65'] = sacar($contasCorrente['190.478.987-65'], 100
 $contasCorrente['190.472.987-72'] = depositar($contasCorrente['190.472.987-72'], 450);
 
 foreach ($contasCorrente as $cpf => $conta){
-    echo  $cpf .' '. $conta['titular'] . '  ' . "Saldo:R$" . $conta['saldo'] . PHP_EOL;
+//    exibirMensagem($cpf .' '. $conta['titular'] . '  ' . "Saldo:R$" . $conta['saldo'] . PHP_EOL);
+    exibirMensagem(
+        "CPF: $cpf | Nome:{$conta['titular']} | Saldo: {$conta['saldo']}
+    ");
 }
