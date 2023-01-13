@@ -32,6 +32,9 @@ $contasCorrente['190.472.987-72'] = depositar($contasCorrente['190.472.987-72'],
 
 toUpperName($contasCorrente['190.478.984-81']);
 
+unset($contasCorrente['190.478.984-81']); // Removendo um item da lista.
+
+
 foreach ($contasCorrente as $cpf => $conta){
     ['titular' => $titular, 'saldo' => $saldo] = $conta;
     exibirMensagem(
