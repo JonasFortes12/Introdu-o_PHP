@@ -39,6 +39,23 @@ function toUpperName(array &$conta) // passagem de parâmetro por referência
     $conta['titular'] = strtoupper($conta['titular']);
 }
 
+/*
+O operador de espalhamento:
+ (...$a) define um array que receberá vários parâmetros como valores,
+que podem ser percorridos e usados para alguma operação.
+*/
+echo "------------------------------------" . PHP_EOL;
+function soma(float ...$a):float
+{
+    $result = 0;
+    foreach ($a as $value){
+        $result += $value;
+    }
+    return $result;
+}
+
+var_dump(soma(2, 2, 8.4, 120.5221, 49));
+
 
 
 
