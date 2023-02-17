@@ -1,0 +1,13 @@
+    _____________My Buy List_______________
+    
+    [] - Salad
+        [] - Tomato
+        [] - Onion
+        [] - Apple
+        [] - Potato      
+    [] - Beer
+    [] - Ice
+    [] - Lemon
+    [] - Watermelon
+    [] - Rice
+______For Lunch____
