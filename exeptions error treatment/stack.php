@@ -4,14 +4,14 @@ function func1()
 {
     echo 'Starting func1 routine' . PHP_EOL;
 
-    //Fatal Error:
+
     try {
         intdiv(7, 0);
     }catch (Error $error){
         echo "An Error detected: " . PHP_EOL . $error . PHP_EOL;
     }
 
-    //Runtime Exception:
+    
     try {
         $array = new SplFixedArray(2);
         $array[4] = 'new element';
